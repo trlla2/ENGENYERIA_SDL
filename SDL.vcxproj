@@ -95,6 +95,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\SDL_3.2.22\include;$(SolutionDir)\dependencies\SDL_image_3.2.4\include;$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\include;$(SolutionDir)\dependencies\SDL_ttf-3.2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -103,10 +104,10 @@
       <AdditionalDependencies>SDL3.lib;SDL3_image.lib;SDL3_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /d /y "$(SolutionDir)\dependencies\SDL_3.2.22\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_image_3.2.4\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_ttf-3.2.2\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
+      <Command>xcopy /d /y "$(SolutionDir)\dependencies\SDL_3.2.22\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_image_3.2.4\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_ttf-3.2.2\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
 xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -118,6 +119,7 @@ xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\SDL_3.2.22\include;$(SolutionDir)\dependencies\SDL_image_3.2.4\include;$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\include;$(SolutionDir)\dependencies\SDL_ttf-3.2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,10 +128,10 @@ xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
       <AdditionalDependencies>SDL3.lib;SDL3_image.lib;SDL3_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /d /y "$(SolutionDir)\dependencies\SDL_3.2.22\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_image_3.2.4\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_ttf-3.2.2\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
+      <Command>xcopy /d /y "$(SolutionDir)\dependencies\SDL_3.2.22\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_image_3.2.4\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_ttf-3.2.2\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
 xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -139,6 +141,7 @@ xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\SDL_3.2.22\include;$(SolutionDir)\dependencies\SDL_image_3.2.4\include;$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\include;$(SolutionDir)\dependencies\SDL_ttf-3.2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -147,10 +150,10 @@ xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
       <AdditionalDependencies>SDL3.lib;SDL3_image.lib;SDL3_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /d /y "$(SolutionDir)\dependencies\SDL_3.2.22\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_image_3.2.4\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_ttf-3.2.2\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
+      <Command>xcopy /d /y "$(SolutionDir)\dependencies\SDL_3.2.22\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_image_3.2.4\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_ttf-3.2.2\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
 xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -162,6 +165,7 @@ xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\SDL_3.2.22\include;$(SolutionDir)\dependencies\SDL_image_3.2.4\include;$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\include;$(SolutionDir)\dependencies\SDL_ttf-3.2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -170,10 +174,10 @@ xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
       <AdditionalDependencies>SDL3.lib;SDL3_image.lib;SDL3_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /d /y "$(SolutionDir)\dependencies\SDL_3.2.22\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_image_3.2.4\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
-xcopy /d /y "$(SolutionDir)\dependencies\SDL_ttf-3.2.2\lib\$(PlatformTarget)\*.dll""$(TargetDir)"
+      <Command>xcopy /d /y "$(SolutionDir)\dependencies\SDL_3.2.22\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_image_3.2.4\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_mixer_2.8.1_compatible\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
+xcopy /d /y "$(SolutionDir)\dependencies\SDL_ttf-3.2.2\lib\$(PlatformTarget)\*.dll" "$(TargetDir)"
 xcopy /d /y "$(SolutionDir)\resources\*.*" "$(TargetDir)\resources\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
