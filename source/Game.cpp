@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "ImageObject.h"
 
 void Game::Init()
 {
@@ -9,7 +10,7 @@ void Game::Init()
 
 	_isRunning = true;
 
-	_gameObjects.push_back(GameObject("resources/Richard_Hebert.jpg", _renderer));
+	_gameObjects.push_back(new ImageObject("resources/Richard_Hebert.jpg", _renderer));
 
 
 }
@@ -23,15 +24,15 @@ void Game::HandleEvents()
 }
 void Game::Update()
 {
-	for (GameObject go : _gameObjects)
-		go.Update();
+	for (Object* go : _gameObjects)
+		go->Update();
 }
 void Game::Render()
 {
 	SDL_RenderClear(_renderer);
 
-	for (GameObject go : _gameObjects)
-		go.Render(_renderer);
+	for (Object* go : _gameObjects)
+		go->Render(_renderer);
 
 	SDL_RenderPresent(_renderer);
 }
