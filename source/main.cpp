@@ -1,10 +1,18 @@
 #include "Game.h"
+#include "RenderManager.h"
 
 #include <SDL3/SDL.h>
 #include <exception>
 #include <iostream>
 
-int main() {
+int main() 
+{
+
+
+	RM->SayHi();
+
+
+
 
 	Game game;
 
