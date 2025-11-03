@@ -2,28 +2,25 @@
 #include "ImageObject.h"
 #include "RenderManager.h"
 #include "TestObject.h "
+#include "InputManager.h"
 
 void Game::Init()
 {
 	RM->Init();
-	CreateWindowAndRenderer();
+	SDL_SetRenderDrawColor(RM->GetRenderer(), 254, 0, 0, 0xFF);
 
-	RM->LoadTexture("source/Richard_Herbert.png");
+	RM->LoadTexture("resources/Richard_Hebert.jpg");
 
-	TestObject test1 = TestObject();
-	_gameObjects.push_back(&test1);
-	TestObject test2 = TestObject();
-	_gameObjects.push_back(&test2);
+	TestObject* test1 = new TestObject();
+	_gameObjects.push_back(test1);
+	TestObject* test2 = new TestObject();
+	_gameObjects.push_back(test2);
 
 	_isRunning = true;
 }
 void Game::HandleEvents()
 {
-	SDL_Event event;
-
-	while (SDL_PollEvent(&event))
-		if (event.type == SDL_EVENT_QUIT)
-			_isRunning = false;
+	_isRunning = !IM->Listen();
 }
 void Game::Update()
 {
@@ -35,15 +32,14 @@ void Game::Render()
 	RM->CLearScreen();
 
 	for (Object* go : _gameObjects)
-		go->Render(_renderer);
+		go->Render();
 
 	RM->RenderScreen();
 }
 
 void Game::Release()
 {
-	SDL_DestroyRenderer(_renderer);
-	SDL_DestroyWindow(_window);
+	RM->Release();
 	SDL_Quit();
 }
 

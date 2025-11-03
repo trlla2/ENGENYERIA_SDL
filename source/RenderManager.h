@@ -3,7 +3,6 @@
 #include <SDL3_ttf/SDL_ttf.h>
 #include <map>
 #include <string>
-#include <iostream> // DELETE
 
 #define RM RenderManager::GetInstance()
 
@@ -16,9 +15,6 @@ public:
 		return &instance;
 	}
 
-	void SayHi() { // DELETE
-		std::cout << "HI" << std::endl;
-	}
 
 	const unsigned int WINDOW_WIDTH = 1360;
 	const unsigned int WINDOW_HEIGHT = 768;

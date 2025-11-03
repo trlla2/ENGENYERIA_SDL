@@ -26,7 +26,7 @@ ImageRenderer::ImageRenderer(Transform* transform, std::string resourcePath, Vec
 	};
 }
 
-void ImageRenderer::Update()
+void ImageRenderer::Update(float dt)
 {
 	Vector2 offset = (Vector2(-_transform->_size.x, -_transform->_size.y) / 2.0f) * _transform->_scale;
 	
@@ -37,7 +37,7 @@ void ImageRenderer::Update()
 	_destinationRect.h = _transform->_size.y * _transform->_scale.y;
 }
 
-void ImageRenderer::Render(SDL_Renderer* renderer)
+void ImageRenderer::Render()
 {
 	SDL_RenderTextureRotated(RM->GetRenderer(), RM->GetTexture(_resourcePath), &_sourceRect, &_destinationRect
 		, _transform->_rotation, NULL, SDL_FLIP_NONE);

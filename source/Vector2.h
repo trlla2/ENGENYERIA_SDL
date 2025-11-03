@@ -41,6 +41,12 @@ public:
 	{
 		return Vector2(x / other, y / other);
 	}
+
+	Vector2 const operator!() 
+	{
+		Normalize();
+		return *this;
+	}
 };
 
 

@@ -7,13 +7,6 @@
 
 int main() 
 {
-
-
-	RM->SayHi();
-
-
-
-
 	Game game;
 
 
