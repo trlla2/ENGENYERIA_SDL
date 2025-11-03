@@ -5,7 +5,9 @@
 class ImageRenderer : public Renderer
 {
 public:
-	void Update() override;
+	ImageRenderer(Transform* transform, std::string resourcePath, Vector2 sourceOffset, Vector2 sourceSize);
+
+	virtual void Update() override;
 
 	void Render(SDL_Renderer* renderer) override;
 

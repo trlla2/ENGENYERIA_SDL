@@ -1,18 +1,21 @@
 #include "Game.h"
 #include "ImageObject.h"
+#include "RenderManager.h"
+#include "TestObject.h "
 
 void Game::Init()
 {
-	InitSDL();
+	RM->Init();
 	CreateWindowAndRenderer();
 
-	SDL_SetRenderDrawColor(_renderer, 254, 0, 0, 0xFF);
+	RM->LoadTexture("source/Richard_Herbert.png");
+
+	TestObject test1 = TestObject();
+	_gameObjects.push_back(&test1);
+	TestObject test2 = TestObject();
+	_gameObjects.push_back(&test2);
 
 	_isRunning = true;
-
-	_gameObjects.push_back(new ImageObject("resources/Richard_Hebert.jpg", _renderer));
-
-
 }
 void Game::HandleEvents()
 {
@@ -29,12 +32,12 @@ void Game::Update()
 }
 void Game::Render()
 {
-	SDL_RenderClear(_renderer);
+	RM->CLearScreen();
 
 	for (Object* go : _gameObjects)
 		go->Render(_renderer);
 
-	SDL_RenderPresent(_renderer);
+	RM->RenderScreen();
 }
 
 void Game::Release()

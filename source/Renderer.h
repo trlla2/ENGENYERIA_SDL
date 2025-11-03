@@ -8,7 +8,7 @@
 class Renderer
 {
 protected:
-	Transform* _transfrom;
+	Transform* _transform;
 	SDL_Color _color;
 	SDL_FRect _sourceRect;
 	SDL_FRect _destinationRect;
@@ -16,7 +16,7 @@ protected:
 
 public:
 	Renderer(Transform* transform, std::string resourcePath)
-		: _transfrom(transform), _resourcePath(resourcePath) {}
+		: _transform(transform), _resourcePath(resourcePath) {}
 	virtual void LoadTexture(std::string path, SDL_Renderer* renderer) = 0 ;
 	virtual void Update() = 0;
 	virtual void Render(SDL_Renderer* renderer) = 0;

@@ -29,17 +29,17 @@ public:
 	void RenderScreen();
 
 	SDL_Renderer* GetRenderer() { return _renderer; }
-	void LoadTextrure(std::string path);
+	void LoadTexture(std::string path);
 	SDL_Texture* GetTexture(std::string path);
 
 private:
 	RenderManager() = default;
 	RenderManager(RenderManager&) = default;
-	~RenderManager(){}
+	~RenderManager();
 
 	SDL_Window* _window;
 	SDL_Renderer* _renderer;
-	std::map<std::string, SDL_Texture*> _texture;
+	std::map<std::string, SDL_Texture*> _textures;
 
 	void InitSDL();
 	void CreateWindowAndRenderer();
