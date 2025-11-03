@@ -16,8 +16,8 @@ public:
 	}
 
 
-	const unsigned int WINDOW_WIDTH = 1360;
-	const unsigned int WINDOW_HEIGHT = 768;
+	const unsigned int WINDOW_WIDTH = 512;
+	const unsigned int WINDOW_HEIGHT = 512;
 
 	void Init();
 	void Release();
