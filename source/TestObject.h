@@ -14,11 +14,18 @@ public:
 		_transform->_position = randomPosition;
 		_transform->_scale = Vector2(0.5f, 0.5f);
 		_transform->_rotation = 30.f;
+
+		_physics->SetLinearDrag(0.1f);
+		_physics->SetAngularDrag(0.1f);
 	}
 
 	void Update() {
 		if (IM->GetEvent(SDLK_S, DOWN))
-			_transform->_position.y += 0.05;
+			_physics->AddForce(Vector2(0.f, 20.f));
+
+		else if (IM->GetEvent(SDLK_R, DOWN))
+			_physics->AddTorque(20.f);
+
 		Object::Update();
 	}
 };
