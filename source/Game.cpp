@@ -26,9 +26,6 @@ void Game::Update()
 {
 	for (Object* go : _gameObjects)
 		go->Update();
-
-	if (IM->GetEvent(SDLK_ESCAPE, DOWN))
-		Release();
 }
 void Game::Render()
 {
