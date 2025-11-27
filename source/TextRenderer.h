@@ -25,6 +25,12 @@ public:
 	
 	virtual void Render() override;
 
+	void SetColor(SDL_Color color) override
+	{
+		Renderer::SetColor(color);
+		SetText(_text);
+	}
+
 	void SetText(std::string text);
 	
 protected:

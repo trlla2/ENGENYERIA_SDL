@@ -24,7 +24,7 @@ public:
 		_destinationRect = rect;
 	}
 
-	void SetColor(SDL_Color color) { _color = color; }
+	virtual void SetColor(SDL_Color color) { _color = color; }
 	SDL_Color GetColor() { return _color; }
 
 
