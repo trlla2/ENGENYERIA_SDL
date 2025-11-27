@@ -1,8 +1,11 @@
 #include "Game.h"
 #include "ImageObject.h"
 #include "RenderManager.h"
-#include "TestObject.h "
 #include "InputManager.h"
+#include "SceneManager.h"
+#include "TimeManager.h"
+#include "Gameplay.h"
+#include <cassert>
 
 void Game::Init()
 {
@@ -11,10 +14,10 @@ void Game::Init()
 
 	RM->LoadTexture("resources/Richard_Hebert.jpg");
 
-	TestObject* test1 = new TestObject();
-	_gameObjects.push_back(test1);
-	TestObject* test2 = new TestObject();
-	_gameObjects.push_back(test2);
+	assert(SM.AddScene("Gameplay", new Gameplay()));
+
+	assert(SM.InitFirstScene("Gameplay"));
+
 
 	_isRunning = true;
 }
@@ -24,15 +27,13 @@ void Game::HandleEvents()
 }
 void Game::Update()
 {
-	for (Object* go : _gameObjects)
-		go->Update();
+	SM.UpdateCurrentScene(TIME.GetDeltaTime());
 }
 void Game::Render()
 {
 	RM->CLearScreen();
 
-	for (Object* go : _gameObjects)
-		go->Render();
+	SM.GetCurrentScene()->Render();
 
 	RM->RenderScreen();
 }
