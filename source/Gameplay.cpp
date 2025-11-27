@@ -1,12 +1,15 @@
 #include "Gameplay.h"
 #include "TestObject.h "
+#include "TextObject.h"
 
 void Gameplay::OnEnter()
 {
-	TestObject* test1 = new TestObject();
-	_objects.push_back(test1);
-	TestObject* test2 = new TestObject();
-	_objects.push_back(test2);
+	SPAWNER.SpawnObject(new TestObject());
+	SPAWNER.SpawnObject(new TestObject());
+
+	TextObject* temp = new TextObject("Press S to apply force Press R to apply torque");
+	temp->GetTransform()->_position = Vector2(100.f, 100.f);
+	_ui.push_back(temp);
 }
 
 void Gameplay::OnExit() { Scene::OnExit(); }

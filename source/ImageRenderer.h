@@ -12,7 +12,7 @@ public:
 	void Render() override;
 
 
-	void LoadTexture(std::string path, SDL_Renderer* renderer) override;
+	//void LoadTexture(std::string path, SDL_Renderer* renderer) override;
 
 };
 

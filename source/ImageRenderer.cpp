@@ -42,12 +42,12 @@ void ImageRenderer::Render()
 	SDL_RenderTextureRotated(RM->GetRenderer(), RM->GetTexture(_resourcePath), &_sourceRect, &_destinationRect
 		, _transform->_rotation, NULL, SDL_FLIP_NONE);
 }
-
-void ImageRenderer::LoadTexture(std::string path, SDL_Renderer* renderer) // ... ????
-{
-	//_texture = IMG_LoadTexture(renderer, path.c_str());
-	//assert(_texture);
-
-	//_sourceRect = { 0.f, 0.f, (float)_texture->w,(float)_texture->h };
-
-}
+//
+//void ImageRenderer::LoadTexture(std::string path, SDL_Renderer* renderer) // ... ????
+//{
+//	//_texture = IMG_LoadTexture(renderer, path.c_str());
+//	//assert(_texture);
+//
+//	//_sourceRect = { 0.f, 0.f, (float)_texture->w,(float)_texture->h };
+//
+//}

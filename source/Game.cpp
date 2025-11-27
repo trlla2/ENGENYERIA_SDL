@@ -13,6 +13,7 @@ void Game::Init()
 	SDL_SetRenderDrawColor(RM->GetRenderer(), 254, 0, 0, 0xFF);
 
 	RM->LoadTexture("resources/Richard_Hebert.jpg");
+	RM->LoadFont("resources/fonts/hyperspace.ttf");
 
 	assert(SM.AddScene("Gameplay", new Gameplay()));
 

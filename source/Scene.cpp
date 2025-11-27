@@ -2,7 +2,7 @@
 
 void Scene::OnExit()
 {
-	//..
+	SPAWNER.ClearSpawner();
 
 	for(Object* o : _objects)
 		delete o;
@@ -18,6 +18,7 @@ void Scene::OnExit()
 
 void Scene::Update(float dt)
 {
+	// DESTROY
 	for (int i = _objects.size() - 1; i >= 0; i--)
 	{
 		if (_objects[i]->IsPendingDestroy())
@@ -36,8 +37,12 @@ void Scene::Update(float dt)
 		}
 	}
 
-	//..
+	//SPAWN
 
+	while (SPAWNER.AreObjectsPendingSpawn())
+		_objects.push_back(SPAWNER.GetSpawnedObject());
+
+	//UPDATE
 	for (Object* o : _objects)
 		o->Update();
 
@@ -45,7 +50,7 @@ void Scene::Update(float dt)
 		o->Update();
 
 
-
+	//COLISION
 	int size = _objects.size();
 	for (int i = 0; i < size; i++)
 	{
@@ -57,7 +62,7 @@ void Scene::Update(float dt)
 			}
 		}
 	}
-
+	// UI????
 	size = _ui.size();
 	for (int i = 0; i < size; i++)
 	{
